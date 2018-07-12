@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="countries">
+        <item>Afghanistan|AF</item>
+        <item>Albania|AL</item>
+        <item>Algeria|DZ</item>
+        <item>Antartica|AQ</item>
+        <item>Argentina|AR</item>
+        <item>Australia|AU</item>
+        <item>Bahamas|BS</item>
+        <item>Belarus|BY</item>
+        <item>Belgium|BE</item>
+        <item>Bolivia|BO</item>
+        <item>Brazil|BR</item>
+        <item>Canada|CA</item>
+        <item>Cuba|CA</item>
+        <item>Egypt|CA</item>
+    </string-array>
+</resources>
