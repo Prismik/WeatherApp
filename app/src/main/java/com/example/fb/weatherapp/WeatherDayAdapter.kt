@@ -41,6 +41,12 @@ class WeatherDayAdapter: RecyclerView.Adapter<WeatherDayAdapter.ViewHolder>() {
         fun configure(data: WeatherItemData) {
             view.dayLabel.text = data.day
             view.temperatureLabel.text = data.temperature
+            view.weatherImage.post {
+                data.getImage {
+                    view.weatherImage.setImageBitmap(it)
+                }
+            }
+
         }
     }
 }
