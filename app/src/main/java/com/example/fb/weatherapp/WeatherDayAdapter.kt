@@ -25,7 +25,7 @@ class WeatherDayAdapter: RecyclerView.Adapter<WeatherDayAdapter.ViewHolder>() {
     }
 
     override fun onBindViewHolder(holder: ViewHolder, index: Int) {
-        holder.configure(data.get(index))
+        holder.configure(data[index])
     }
 
     class ViewHolder(view: View): RecyclerView.ViewHolder(view), View.OnClickListener {

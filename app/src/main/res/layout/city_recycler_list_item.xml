@@ -7,9 +7,10 @@
 
     <TextView
         android:id="@+id/city_label"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         tools:text="Montreal"
+        android:textColor="@color/charcoal"
         android:layout_marginTop="@dimen/standard_margin"
         android:layout_marginStart="@dimen/standard_margin"
         android:layout_marginEnd="@dimen/standard_margin"

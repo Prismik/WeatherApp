@@ -30,14 +30,15 @@ class WeatherForecastHttpService {
         }
 
         private fun parseCountry(country: String) {
-            val values = country.split("|".toRegex())
+            val values = country.split('|')
+
             cities.add(CityItemData(values[0], values[1]))
         }
 
-        fun getForecast(atCity: String, callback: (ArrayList<WeatherItemData>) -> Unit) {
+        fun getForecast(atCity: CityItemData, callback: (ArrayList<WeatherItemData>) -> Unit) {
             val url = "https://api.openweathermap.org/data/2.5/forecast"
             val httpBuider = HttpUrl.parse(url)!!.newBuilder()
-            httpBuider.addQueryParameter("q", "Montreal,CA")
+            httpBuider.addQueryParameter("q", "${atCity.name},${atCity.countryCode}")
             httpBuider.addQueryParameter("units", "metric")
             httpBuider.addQueryParameter("APPID", "a53cb4b89bd8f8d995a8fcf302627dbe")
             val request = Request.Builder().url(httpBuider.build()).build()
