@@ -23,9 +23,11 @@ class WeatherForecastHttpService {
         var cities = ArrayList<CityItemData>()
 
         fun loadData(context: Context) {
-            var countries = context.resources.getStringArray(R.array.countries)
-            for (country in countries) {
-                parseCountry(country)
+            if (cities.isEmpty()) {
+                var countries = context.resources.getStringArray(R.array.countries)
+                for (country in countries) {
+                    parseCountry(country)
+                }
             }
         }
 
